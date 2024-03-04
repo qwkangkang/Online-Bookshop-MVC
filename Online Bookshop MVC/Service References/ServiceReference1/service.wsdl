@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PaymentService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ModelLibrary" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPaymentService_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_RetrievePaymentDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePaymentDetail" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_RetrievePaymentDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePaymentDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_RetrievePaymentPageInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePaymentPageInfo" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_RetrievePaymentPageInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePaymentPageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_RetrievePaymentPageInfoEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePaymentPageInfoEmail" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_RetrievePaymentPageInfoEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePaymentPageInfoEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_RetrieveCartPageInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveCartPageInfo" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_RetrieveCartPageInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveCartPageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_CalculateTotalPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateTotalPrice" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_CalculateTotalPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateTotalPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_DeleteZeroCartItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteZeroCartItem" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_DeleteZeroCartItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteZeroCartItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_SaveCartChangesToDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCartChangesToDB" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_SaveCartChangesToDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCartChangesToDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_CheckBookQuantity_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckBookQuantity" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_CheckBookQuantity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckBookQuantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_RetrieveWishlistPageInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveWishlistPageInfo" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_RetrieveWishlistPageInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveWishlistPageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_RemoveFromWishlist_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveFromWishlist" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_RemoveFromWishlist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveFromWishlistResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPaymentService">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetData" message="tns:IPaymentService_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetDataResponse" message="tns:IPaymentService_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePaymentDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/RetrievePaymentDetail" message="tns:IPaymentService_RetrievePaymentDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/RetrievePaymentDetailResponse" message="tns:IPaymentService_RetrievePaymentDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePaymentPageInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/RetrievePaymentPageInfo" message="tns:IPaymentService_RetrievePaymentPageInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/RetrievePaymentPageInfoResponse" message="tns:IPaymentService_RetrievePaymentPageInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePaymentPageInfoEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/RetrievePaymentPageInfoEmail" message="tns:IPaymentService_RetrievePaymentPageInfoEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/RetrievePaymentPageInfoEmailResponse" message="tns:IPaymentService_RetrievePaymentPageInfoEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCartPageInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/RetrieveCartPageInfo" message="tns:IPaymentService_RetrieveCartPageInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/RetrieveCartPageInfoResponse" message="tns:IPaymentService_RetrieveCartPageInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateTotalPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/CalculateTotalPrice" message="tns:IPaymentService_CalculateTotalPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/CalculateTotalPriceResponse" message="tns:IPaymentService_CalculateTotalPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteZeroCartItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/DeleteZeroCartItem" message="tns:IPaymentService_DeleteZeroCartItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/DeleteZeroCartItemResponse" message="tns:IPaymentService_DeleteZeroCartItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCartChangesToDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/SaveCartChangesToDB" message="tns:IPaymentService_SaveCartChangesToDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/SaveCartChangesToDBResponse" message="tns:IPaymentService_SaveCartChangesToDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckBookQuantity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/CheckBookQuantity" message="tns:IPaymentService_CheckBookQuantity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/CheckBookQuantityResponse" message="tns:IPaymentService_CheckBookQuantity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveWishlistPageInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/RetrieveWishlistPageInfo" message="tns:IPaymentService_RetrieveWishlistPageInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/RetrieveWishlistPageInfoResponse" message="tns:IPaymentService_RetrieveWishlistPageInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFromWishlist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/RemoveFromWishlist" message="tns:IPaymentService_RemoveFromWishlist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/RemoveFromWishlistResponse" message="tns:IPaymentService_RemoveFromWishlist_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPaymentService" type="tns:IPaymentService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePaymentDetail">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/RetrievePaymentDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePaymentPageInfo">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/RetrievePaymentPageInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePaymentPageInfoEmail">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/RetrievePaymentPageInfoEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCartPageInfo">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/RetrieveCartPageInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateTotalPrice">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/CalculateTotalPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteZeroCartItem">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/DeleteZeroCartItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCartChangesToDB">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/SaveCartChangesToDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBookQuantity">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/CheckBookQuantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveWishlistPageInfo">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/RetrieveWishlistPageInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFromWishlist">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/RemoveFromWishlist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PaymentService">
+    <wsdl:port name="BasicHttpBinding_IPaymentService" binding="tns:BasicHttpBinding_IPaymentService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WcfOnlineBookshopMVC/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

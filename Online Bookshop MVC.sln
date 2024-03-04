@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Online_Bookshop_MVC", "Online Bookshop MVC\Online_Bookshop_MVC.vbproj", "{368C4197-356C-419E-8B68-80CD65F7E253}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ECF70A27-D1F2-42E2-A509-5FF5D25A6DA3} = {ECF70A27-D1F2-42E2-A509-5FF5D25A6DA3}
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "dalInternalClassLib", "ClassLibrary1\dalInternalClassLib.vbproj", "{ECF70A27-D1F2-42E2-A509-5FF5D25A6DA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2BC5AFFD-C984-4C74-9375-FF3D8C95F2C7}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Online_Bookshop_MVC_Admin", "Online_Bookshop_MVC_Admin\Online_Bookshop_MVC_Admin.vbproj", "{F0107638-A5E5-421A-9AAE-605592A3E936}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WcfOnlineBookshopMVC", "..\WcfOnlineBookshopMVC\WcfOnlineBookshopMVC\WcfOnlineBookshopMVC.vbproj", "{5155B377-49BB-4CB9-80E9-7E24E014ACBA}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PaymentDAL", "..\PaymentDAL\PaymentDAL\PaymentDAL.vbproj", "{1737D9BA-50DA-443D-9392-E72D871B3764}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{368C4197-356C-419E-8B68-80CD65F7E253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{368C4197-356C-419E-8B68-80CD65F7E253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{368C4197-356C-419E-8B68-80CD65F7E253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{368C4197-356C-419E-8B68-80CD65F7E253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECF70A27-D1F2-42E2-A509-5FF5D25A6DA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECF70A27-D1F2-42E2-A509-5FF5D25A6DA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECF70A27-D1F2-42E2-A509-5FF5D25A6DA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECF70A27-D1F2-42E2-A509-5FF5D25A6DA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0107638-A5E5-421A-9AAE-605592A3E936}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0107638-A5E5-421A-9AAE-605592A3E936}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0107638-A5E5-421A-9AAE-605592A3E936}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0107638-A5E5-421A-9AAE-605592A3E936}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5155B377-49BB-4CB9-80E9-7E24E014ACBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5155B377-49BB-4CB9-80E9-7E24E014ACBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5155B377-49BB-4CB9-80E9-7E24E014ACBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5155B377-49BB-4CB9-80E9-7E24E014ACBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1737D9BA-50DA-443D-9392-E72D871B3764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1737D9BA-50DA-443D-9392-E72D871B3764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1737D9BA-50DA-443D-9392-E72D871B3764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1737D9BA-50DA-443D-9392-E72D871B3764}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {608F70F4-C518-48FF-BEE3-145A33CC804E}
+	EndGlobalSection
+EndGlobal

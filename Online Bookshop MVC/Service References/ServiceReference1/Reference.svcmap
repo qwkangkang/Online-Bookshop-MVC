@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="137d9518-7e69-47cf-8354-e09d408db111" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WcfOnlineBookshopMVC/Service1/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="fae53a77-a7b4-4c2c-a4f8-6d9d11cdd7b5" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfOnlineBookshopMVC/Service1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="326d9eca-087f-4b22-8692-713af90a0833" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfOnlineBookshopMVC/Service1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="8304d88f-cc39-4870-9b31-0086645b70d4" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfOnlineBookshopMVC/Service1/mex" />
+    <MetadataFile FileName="Message.xsd" MetadataType="Schema" ID="3ef0e5d2-c433-411b-ab5d-a8103eafaf91" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfOnlineBookshopMVC/Service1/mex" />
+    <MetadataFile FileName="ModelLibrary.xsd" MetadataType="Schema" ID="bb064718-e466-4f11-b95a-57e5504151f2" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfOnlineBookshopMVC/Service1/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

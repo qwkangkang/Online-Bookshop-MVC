@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Payment>
+  <Contact>moonmoon@gmail.com</Contact>
+  <Method>selft_collect</Method>
+  <Location>BookWorm IOI Mall Puchong</Location>
+  <TotalPrice>88.90</TotalPrice>
+  <DeliveryFee>0</DeliveryFee>
+  <DateTimePayment>1/19/2024 8:30:18 PM</DateTimePayment>
+  <PaymentAmount>88.90</PaymentAmount>
+  <Country>Malaysia</Country>
+  <Fname>moon</Fname>
+  <Lname>moon</Lname>
+  <Address>123, Jalan Malinja</Address>
+  <Postcode>65234</Postcode>
+  <City>Setapak</City>
+  <State>Kuala Lumpur</State>
+  <Phone>012-3456789</Phone>
+  <UserID>1017</UserID>
+  <BookIDBuyNow>1004</BookIDBuyNow>
+  <QuantityBuyNow>1 </QuantityBuyNow>
+</Payment>

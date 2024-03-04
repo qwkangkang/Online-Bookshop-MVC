@@ -1,0 +1,19 @@
+﻿
+
+@media print{
+        
+       .header-container-cus, .footer, #exportPdf, .exclude-printing{
+           display:none !important;
+       }
+
+       #pdfCustomersReport{
+           display:block !important;
+       }
+
+        }
+
+@media screen{
+    #pdfCustomersReport{
+        display:none !important;
+    }
+}
